@@ -1,0 +1,9 @@
+[package]
+name = "solar-system"
+authors = ["JatoMixo <jatomixo@proton.me>"]
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+wgpu = { version = "25.0.0" }
+winit = { version = "0.30.9" }

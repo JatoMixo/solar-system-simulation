@@ -1,3 +1,5 @@
+mod physics_engine;
+
 use winit::{
     application::ApplicationHandler, event_loop::EventLoop, keyboard::NamedKey, window::{Window, WindowAttributes}, event::WindowEvent
 };
@@ -10,6 +12,8 @@ struct App {
 impl ApplicationHandler for App {
     fn resumed(&mut self, event_loop: &winit::event_loop::ActiveEventLoop) {
         self.window = Some(event_loop.create_window(WindowAttributes::default()).expect("Error creating window"));
+
+        self.window.as_mut().unwrap().set_title("Solar System");
     }
 
     fn window_event(
